@@ -24,10 +24,8 @@ Written in pure Python, `noSleep` is designed to be completely unobtrusive, cons
 You can install `noSleep` instantly without cloning the repository. Open a PowerShell terminal and run:
 
 ```powershell
-irm https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/noSleep/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/tiktok-rick/noSleep/main/install.ps1 | iex
 ```
-
-*Note: Replace `YOUR_GITHUB_USERNAME` with your actual GitHub username once pushed.*
 
 ### Option 2: Local Installation (Cloned Repository)
 
