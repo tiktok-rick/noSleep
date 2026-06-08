@@ -21,7 +21,7 @@ foreach ($file in $files) {
         Write-Host "Copied $file from local directory."
     } else {
         # Fallback to downloading from GitHub
-        $githubUser = if ($env:NOSLEEP_GH_USER) { $env:NOSLEEP_GH_USER } else { "YOUR_GITHUB_USERNAME" }
+        $githubUser = if ($env:NOSLEEP_GH_USER) { $env:NOSLEEP_GH_USER } else { "tiktok-rick" }
         $sourceUrl = "https://raw.githubusercontent.com/$githubUser/noSleep/main/$file"
         Write-Host "$file not found locally. Fetching from $sourceUrl..." -ForegroundColor Yellow
         try {
@@ -29,7 +29,7 @@ foreach ($file in $files) {
             Write-Host "Successfully downloaded $file" -ForegroundColor Green
         } catch {
             Write-Error "Failed to download $file. If installing from a fork, run: `$env:NOSLEEP_GH_USER = 'YourUsername' before installing."
-            exit 1
+            throw "Installation failed. Could not download $file."
         }
     }
 }
