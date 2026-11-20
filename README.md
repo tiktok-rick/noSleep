@@ -51,6 +51,14 @@ Once installed, open a new Command Prompt or PowerShell window and type:
 ```cmd
 nosleep
 ```
+In default mode, the script nudges the cursor every 5 minutes and automatically pauses between 18:00 and 18:15 (6:00 PM - 6:15 PM) to allow normal system idle/lock behavior before resuming.
+
+### Classic Mode
+To disable the 18:00 pause feature and run continuously:
+
+```cmd
+nosleep --classic
+```
 
 ### Test Mode
 To verify that everything is working instantly without waiting 5 minutes, run:
